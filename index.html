@@ -1,0 +1,326 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rabbi Fishel Jacobs</title>
+<meta name="description" content="Rabbi Fishel Jacobs — author, speaker, former chaplain in the Israel Prison Service, and karate master. Books, biography and contact.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,300;0,400;0,600;1,400&family=Karla:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#F4F5F1;
+    --card:#FFFFFF;
+    --ink:#1B2A25;
+    --muted:#5A6A63;
+    --rule:#D3D9D2;
+    --green:#2F4A3C;
+    --brass:#9A7B34;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0;background:var(--paper);color:var(--ink);
+    font-family:"Spectral",Georgia,serif;font-weight:300;
+    font-size:1.1875rem;line-height:1.75;
+  }
+  a{color:var(--green);text-underline-offset:3px}
+  a:hover{text-decoration-thickness:2px}
+  :focus-visible{outline:3px solid var(--brass);outline-offset:4px;border-radius:2px}
+  .wrap{max-width:60rem;margin:0 auto;padding:0 1.5rem}
+  .prose{max-width:34rem}
+  h1,h2,h3{font-weight:600;line-height:1.2}
+
+  header{border-bottom:1px solid var(--rule)}
+  header .wrap{display:flex;flex-wrap:wrap;gap:.75rem 2rem;align-items:baseline;justify-content:space-between;padding-top:1.25rem;padding-bottom:1.25rem}
+  .site-name{font-weight:600;font-size:1.1rem;text-decoration:none;color:var(--ink)}
+  nav{font-family:"Karla",system-ui,sans-serif;font-size:1rem;display:flex;flex-wrap:wrap;gap:1.5rem}
+  nav a{color:var(--muted);text-decoration:none}
+  nav a:hover{color:var(--green);text-decoration:underline}
+
+  .intro{padding:5rem 0 3.5rem}
+  .intro h1{font-size:clamp(2.4rem,6.5vw,4rem);margin:0 0 1.75rem;max-width:16ch;letter-spacing:-.015em}
+  .intro p{margin:0 0 1.25rem}
+  .intro .prose{max-width:38rem;font-size:1.25rem}
+
+  section{padding:3.5rem 0;border-top:1px solid var(--rule)}
+  section > .wrap > h2{font-size:1.75rem;margin:0 0 .4rem}
+  .lede{color:var(--muted);margin:0 0 2.5rem;max-width:34rem}
+
+  /* Books */
+  .group{margin-bottom:3rem}
+  .group > h3{
+    font-family:"Karla",sans-serif;font-size:1rem;font-weight:600;
+    color:var(--brass);margin:0 0 .25rem;
+  }
+  .group > p.about{color:var(--muted);margin:0 0 1.5rem;max-width:34rem;font-size:1.05rem}
+  .book{display:grid;grid-template-columns:7.5rem 1fr;gap:2.25rem;padding:2rem 0;border-top:1px solid var(--rule)}
+  .book:first-of-type{border-top:0;padding-top:0}
+  .book .cover img{width:100%;height:auto;display:block;border-radius:1px;box-shadow:0 1px 4px rgba(27,42,37,.22)}
+  .book .year{font-family:"Karla",sans-serif;font-size:.95rem;color:var(--muted);margin-top:.6rem}
+  .book h4{font-size:1.3rem;font-weight:600;margin:0 0 .35rem;line-height:1.3}
+  .book p{margin:0;max-width:34rem}
+  .book .meta{font-family:"Karla",sans-serif;font-size:.95rem;color:var(--muted);margin-top:.5rem}
+  blockquote{
+    margin:1rem 0 0;padding-left:1.25rem;border-left:2px solid var(--brass);
+    font-style:italic;color:var(--muted);max-width:32rem;
+  }
+  blockquote cite{display:block;font-style:normal;font-family:"Karla",sans-serif;font-size:.9rem;margin-top:.35rem}
+
+  /* Life */
+  .life{list-style:none;margin:0;padding:0;max-width:44rem}
+  .life li{display:grid;grid-template-columns:7rem 1fr;gap:2rem;padding:1.1rem 0;border-top:1px solid var(--rule)}
+  .life li:first-child{border-top:0}
+  .life .when{font-family:"Karla",sans-serif;font-size:.95rem;color:var(--muted)}
+  .life strong{font-weight:600;display:block}
+  .life span{color:var(--muted)}
+
+  .section-photo{margin:0 0 3rem;max-width:26rem}
+  .section-photo img{width:100%;height:auto;display:block;border-radius:2px}
+  .speaking{display:grid;grid-template-columns:1fr 13rem;gap:3rem;align-items:start}
+  .speaking .shot{margin:0}
+  .speaking .shot img{width:100%;height:auto;display:block;border-radius:2px}
+  .speaking .shot figcaption{font-family:"Karla",sans-serif;font-size:.9rem;color:var(--muted);margin-top:.6rem;line-height:1.45}
+  .two-up{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:start}
+  .portrait{aspect-ratio:4/5;background:#DFE4DD;border-radius:2px;display:flex;align-items:center;justify-content:center;color:var(--muted);font-family:"Karla",sans-serif;font-size:.95rem;overflow:hidden}
+  .portrait img{width:100%;height:100%;object-fit:cover}
+
+  .contact{background:var(--card)}
+  .contact .email{font-size:clamp(1.25rem,3.5vw,1.6rem);margin:1.5rem 0 .5rem}
+  .address{font-family:"Karla",sans-serif;font-size:1rem;color:var(--muted);line-height:1.6}
+
+  footer{padding:2.5rem 0;font-family:"Karla",sans-serif;font-size:.95rem;color:var(--muted);border-top:1px solid var(--rule)}
+
+  @media (max-width:720px){
+    body{font-size:1.0625rem}
+    .intro{padding:3rem 0 2.5rem}
+    .book,.life li{grid-template-columns:1fr;gap:.35rem}
+    .book{padding:1.5rem 0}
+    .book .cover{max-width:7.5rem;margin-bottom:.75rem}
+    .two-up{grid-template-columns:1fr;gap:2rem}
+    .speaking{grid-template-columns:1fr;gap:1.75rem}
+    .speaking .shot{max-width:11rem}
+    .portrait{max-width:16rem}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <a class="site-name" href="#">Rabbi Fishel Jacobs</a>
+    <nav aria-label="Sections">
+      <a href="#books">Books</a>
+      <a href="#life">Life</a>
+      <a href="#speaking">Speaking</a>
+      <a href="#ask">Ask the rabbi</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <section class="intro" style="border-top:0" aria-label="Welcome">
+    <div class="wrap">
+      <h1>Hello. I'm Rabbi Fishel Jacobs.</h1>
+      <div class="prose">
+        <p>I was born in Brooklyn and raised in Vermont. I spent thirteen years in yeshiva and kollel, and thirteen more as a chaplain and staff officer in the Israel Prison Service, serving the men inside maximum-security facilities.</p>
+        <p>Along the way I've written books: halachic works for rabbis and for families, a memoir of my years inside maximum-security prisons, and stories for children. This page gathers all of it in one place.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="books">
+    <div class="wrap">
+      <h2>Books</h2>
+      <p class="lede">Written over three decades, in three different directions.</p>
+      <div class="section-photo">
+        <img src="reading.jpg" alt="Rabbi Fishel Jacobs reading a copy of Family Purity" loading="lazy">
+      </div>
+
+      <div class="group">
+        <h3>Halacha and family purity</h3>
+        <p class="about">Practical Talmudic law, written to be used: by rabbis and dayanim in Hebrew, and by families in plain English.</p>
+
+        <article class="book">
+          <div class="cover">
+            <img src="covers/chochmot-hatahara.jpg" alt="Cover of Chochmot HaTahara" loading="lazy">
+            <div class="year">1998</div>
+          </div>
+          <div>
+            <h4>Chochmot HaTahara</h4>
+            <p>My first work, in Hebrew: a commentary on the laws of niddah and vestos in Yoreh De'ah, with original explanatory diagrams for students and poskim.</p>
+            <blockquote>"This is the work of a craftsman, a bottle containing manna."<cite>Rabbi Shalom Mashash, Head Rabbi of Jerusalem</cite></blockquote>
+          </div>
+        </article>
+
+        <article class="book">
+          <div class="cover">
+            <img src="covers/family-purity.jpg" alt="Cover of Family Purity" loading="lazy">
+            <div class="year">2000</div>
+          </div>
+          <div>
+            <h4>Family Purity — A Guide to Marital Fulfillment</h4>
+            <p>My main English work: a complete guide to the laws and customs of taharas hamishpacha, following the Shulchan Aruch of the Alter Rebbe, written in a warm and usable tone for the English-speaking home.</p>
+            <blockquote>"Your book should be assured a distinguished place in every Jewish home and library."<cite>Rabbi Marlowe, Beth Din, Crown Heights</cite></blockquote>
+          </div>
+        </article>
+
+        <article class="book">
+          <div class="cover">
+            <img src="covers/times.jpg" alt="Cover of Times" loading="lazy">
+            <div class="year"></div>
+          </div>
+          <div>
+            <h4>Times / Zemonim</h4>
+            <p>A calendar companion to <em>Family Purity</em>, gathering the laws of hefsek tahara, the Seven White Days and vestos alongside a multi-year calendar.</p>
+            <blockquote>"A well compiled work … of value to the public."<cite>Rabbi Yitzchak Yeruslavski, Head Rabbi of Kiryat Melachi</cite></blockquote>
+          </div>
+        </article>
+
+        <article class="book">
+          <div class="cover">
+            <img src="covers/study-guide.jpg" alt="Cover of the Study Guide for Chosson and Kallah" loading="lazy">
+            <div class="year"></div>
+          </div>
+          <div>
+            <h4>Study Guide for Chosson and Kallah</h4>
+            <p>A teaching text for couples preparing for marriage, drawn from many years of teaching chassanim.</p>
+            <blockquote>"An excellent and valuable study aid."<cite>Rabbi T. Bolton, Assistant Rosh Yeshiva, Ohr Tmimim</cite></blockquote>
+          </div>
+        </article>
+
+        <article class="book">
+          <div class="cover">
+            <img src="covers/blech-book.jpg" alt="Cover of The Blech Book" loading="lazy">
+            <div class="year">2007</div>
+          </div>
+          <div>
+            <h4>The Blech Book — Complete and Illustrated Guide</h4>
+            <p>An illustrated guide to the laws of warming food on Shabbos, from the practical questions that come up in every kitchen.</p>
+            <blockquote>"The popular question and answer format … the extensive footnoting will allow them to see the sources."<cite>Rabbi B. Yurkowicz, Rabbi of the Chabad community, Lod</cite></blockquote>
+          </div>
+        </article>
+      </div>
+
+      <div class="group">
+        <h3>Memoir</h3>
+        <p class="about">Thirteen years as a chaplain inside Israel's maximum-security prisons, and what I learned there about people.</p>
+
+        <article class="book">
+          <div class="cover">
+            <img src="covers/israel-behind-bars.jpg" alt="Cover of Israel Behind Bars" loading="lazy">
+            <div class="year">2005</div>
+          </div>
+          <div>
+            <h4>Israel Behind Bars — True Stories of Hope and Redemption</h4>
+            <p>The first book written from inside the Israel Prison Service, told through the men I met there.</p>
+          </div>
+        </article>
+
+        <article class="book">
+          <div class="cover">
+            <img src="covers/coffee-melts-bars.jpg" alt="Cover of Coffee Melts Bars" loading="lazy">
+            <div class="year">2016</div>
+          </div>
+          <div>
+            <h4>Coffee Melts Bars — My Israeli Prison Career</h4>
+            <p>The memoir rewritten and republished: the full account of my years as a Major and chaplain, and the human moments that shaped how I understand compassion and responsibility.</p>
+            <p class="meta">Gefen Publishing</p>
+          </div>
+        </article>
+      </div>
+
+      <div class="group">
+        <h3>For children</h3>
+        <p class="about">A boy named David, and the two kings who argue over his choices. The series grew out of a play we performed for tens of thousands of children across Israel.</p>
+
+        <article class="book">
+          <div class="cover">
+            <img src="covers/two-kings-1.jpg" alt="Cover of Two Kings: Let's Go Play" loading="lazy">
+            <div class="year">2008</div>
+          </div>
+          <div>
+            <h4>Two Kings: Let's Go Play</h4>
+            <p>David has to choose between watching his little sister and going out to play with his friends.</p>
+            <p class="meta">Israel Bookshop Publications</p>
+          </div>
+        </article>
+
+        <article class="book">
+          <div class="cover">
+            <img src="covers/two-kings-2.jpg" alt="Cover of Two Kings: It's My Turn" loading="lazy">
+            <div class="year">2009</div>
+          </div>
+          <div>
+            <h4>Two Kings: It's My Turn</h4>
+            <p>The computer, the school project, and a sister who needs it more than he does.</p>
+            <p class="meta">Israel Bookshop Publications · Hebrew editions, 2014</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="life">
+    <div class="wrap">
+      <h2>Life</h2>
+      <p class="lede">A Vermont kid who kept saying yes.</p>
+      <div class="two-up">
+        <ol class="life">
+          <li><span class="when">1974</span><div><strong>Black belt</strong><span>International Tang Soo Do Association, at eighteen.</span></div></li>
+          <li><span class="when">1970s</span><div><strong>University of Vermont</strong><span>Found Judaism as a student, and left for yeshiva in Israel.</span></div></li>
+          <li><span class="when">1979</span><div><strong>Left for Israel</strong><span>To learn, and to stay.</span></div></li>
+          <li><span class="when">1979–1992</span><div><strong>Yeshiva and kollel</strong><span>Thirteen years at Tomchei Temimim, then ordination from the Chief Rabbinate and training as a rabbinic advocate at the Harry Fischel Institute.</span></div></li>
+          <li><span class="when">1992–2005</span><div><strong>Israel Prison Service</strong><span>Full-time chaplain and staff officer with the rank of Major, serving the men in maximum-security facilities.</span></div></li>
+          <li><span class="when">1998–2007</span><div><strong>Tel Aviv University</strong><span>Chabad campus chaplain, as an emissary of the Rebbe.</span></div></li>
+          <li><span class="when">2006</span><div><strong>Eighth-degree master instructor</strong><span>Promoted by Grandmaster Dr. Tae Yun Kim.</span></div></li>
+        </ol>
+        <div class="portrait">
+          <img src="portrait.jpg" alt="Rabbi Fishel Jacobs">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="speaking">
+    <div class="wrap speaking">
+      <div class="prose">
+      <h2>Speaking</h2>
+      <p>I speak at campuses, schools, communities and companies, in Israel and abroad, about the prison years, about the martial arts, and about what holds a family together. Some talks include a karate demonstration; most are simply stories and the lessons inside them.</p>
+      <p>If you'd like to arrange a talk, <a href="#contact">write to me</a> and tell me about your audience.</p>
+      </div>
+      <figure class="shot">
+        <img src="demonstration.jpg" alt="Rabbi Fishel Jacobs breaking concrete blocks during a demonstration" loading="lazy">
+        <figcaption>A demonstration, mid-talk.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section id="ask">
+    <div class="wrap prose">
+      <h2>Ask the rabbi</h2>
+      <p>I serve as the responding rabbi for several websites dealing with practical Talmudic law, answering questions on family purity and related areas. Questions are welcome, and are answered privately.</p>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <div class="wrap prose">
+      <h2>Contact</h2>
+      <p>Whether you've read one of the books, have a question, or would like me to speak, I'd be glad to hear from you.</p>
+      <p class="email"><a href="mailto:RabbiJacobs@gmail.com">RabbiJacobs@gmail.com</a></p>
+
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">© <span id="yr"></span> Fishel Jacobs</div>
+</footer>
+
+<script>document.getElementById("yr").textContent = new Date().getFullYear();</script>
+</body>
+</html>

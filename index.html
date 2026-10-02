@@ -57,7 +57,7 @@
   .group > p.about{color:var(--muted);margin:0 0 1.5rem;max-width:34rem;font-size:1.05rem}
   .book{display:grid;grid-template-columns:7.5rem 1fr;gap:2.25rem;padding:2rem 0;border-top:1px solid var(--rule)}
   .book:first-of-type{border-top:0;padding-top:0}
-  .book .cover img{width:100%;height:auto;display:block;border-radius:1px;box-shadow:0 1px 4px rgba(27,42,37,.22)}
+  .book .cover img{width:100%;height:auto;display:block;border-radius:1px;border:1px solid rgba(27,42,37,.45);box-shadow:0 2px 6px rgba(27,42,37,.18)}
   .book .year{font-family:"Karla",sans-serif;font-size:.95rem;color:var(--muted);margin-top:.6rem}
   .book h4{font-size:1.3rem;font-weight:600;margin:0 0 .35rem;line-height:1.3}
   .book p{margin:0;max-width:34rem}
@@ -82,7 +82,7 @@
   .speaking .shot{margin:0}
   .speaking .shot img{width:100%;height:auto;display:block;border-radius:2px}
   .speaking .shot figcaption{font-family:"Karla",sans-serif;font-size:.9rem;color:var(--muted);margin-top:.6rem;line-height:1.45}
-  .two-up{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:start}
+  .two-up{display:grid;grid-template-columns:15rem 1fr;gap:3rem;align-items:start}
   .portrait{aspect-ratio:4/5;background:#DFE4DD;border-radius:2px;display:flex;align-items:center;justify-content:center;color:var(--muted);font-family:"Karla",sans-serif;font-size:.95rem;overflow:hidden}
   .portrait img{width:100%;height:100%;object-fit:cover}
 
@@ -126,7 +126,7 @@
     <div class="wrap">
       <h1>Hello. I'm Rabbi Fishel Jacobs.</h1>
       <div class="prose">
-        <p>I was born in Brooklyn and raised in Vermont. I spent thirteen years in yeshiva and kollel, and thirteen more as a chaplain and staff officer in the Israel Prison Service, serving the men inside maximum-security facilities.</p>
+        <p>I was born in Brooklyn and raised in Vermont. I spent thirteen years in yeshiva and kollel, and thirteen more as a chaplain and staff officer in the Israel Prison Service, serving the men and women inside maximum-security facilities.</p>
         <p>Along the way I've written books: halachic works for rabbis and for families, a memoir of my years inside maximum-security prisons, and stories for children. This page gathers all of it in one place.</p>
       </div>
     </div>
@@ -164,7 +164,7 @@
           <div>
             <h4>Family Purity — A Guide to Marital Fulfillment</h4>
             <p>My main English work: a complete guide to the laws and customs of taharas hamishpacha, following the Shulchan Aruch of the Alter Rebbe, written in a warm and usable tone for the English-speaking home.</p>
-            <blockquote>"Your book should be assured a distinguished place in every Jewish home and library."<cite>Rabbi Marlowe, Beth Din, Crown Heights</cite></blockquote>
+            <blockquote>"Well researched, and fills a void."<cite>Chabad Rabbinical Court of Eretz Yisrael</cite></blockquote>
           </div>
         </article>
 
@@ -174,8 +174,8 @@
             <div class="year"></div>
           </div>
           <div>
-            <h4>Times / Zemonim</h4>
-            <p>A calendar companion to <em>Family Purity</em>, gathering the laws of hefsek tahara, the Seven White Days and vestos alongside a multi-year calendar.</p>
+            <h4>Times</h4>
+            <p>The calendar companion to <em>Family Purity</em>: the laws of hefsek tahara, the Seven White Days and vestos, with a multi-year calendar. Published in Hebrew as <em>Zemonim</em>.</p>
             <blockquote>"A well compiled work … of value to the public."<cite>Rabbi Yitzchak Yeruslavski, Head Rabbi of Kiryat Melachi</cite></blockquote>
           </div>
         </article>
@@ -187,8 +187,8 @@
           </div>
           <div>
             <h4>Study Guide for Chosson and Kallah</h4>
-            <p>A teaching text for couples preparing for marriage, drawn from many years of teaching chassanim.</p>
-            <blockquote>"An excellent and valuable study aid."<cite>Rabbi T. Bolton, Assistant Rosh Yeshiva, Ohr Tmimim</cite></blockquote>
+            <p>A review guide for couples, whether preparing for marriage or already married, with multiple-choice quizzes that clarify and simplify the laws.</p>
+            <blockquote>"Tests should be given periodically to check the students' Torah knowledge."<cite>From a letter of the Lubavitcher Rebbe</cite></blockquote>
           </div>
         </article>
 
@@ -209,16 +209,6 @@
         <h3>Memoir</h3>
         <p class="about">Thirteen years as a chaplain inside Israel's maximum-security prisons, and what I learned there about people.</p>
 
-        <article class="book">
-          <div class="cover">
-            <img src="covers/israel-behind-bars.jpg" alt="Cover of Israel Behind Bars" loading="lazy">
-            <div class="year">2005</div>
-          </div>
-          <div>
-            <h4>Israel Behind Bars — True Stories of Hope and Redemption</h4>
-            <p>The first book written from inside the Israel Prison Service, told through the men I met there.</p>
-          </div>
-        </article>
 
         <article class="book">
           <div class="cover">
@@ -227,7 +217,7 @@
           </div>
           <div>
             <h4>Coffee Melts Bars — My Israeli Prison Career</h4>
-            <p>The memoir rewritten and republished: the full account of my years as a Major and chaplain, and the human moments that shaped how I understand compassion and responsibility.</p>
+            <p>The full account of my years as a Major and chaplain inside Israel's prisons, and the human moments that shaped how I understand compassion and responsibility.</p>
             <p class="meta">Gefen Publishing</p>
           </div>
         </article>
@@ -257,7 +247,7 @@
           <div>
             <h4>Two Kings: It's My Turn</h4>
             <p>The computer, the school project, and a sister who needs it more than he does.</p>
-            <p class="meta">Israel Bookshop Publications · Hebrew editions, 2014</p>
+            <p class="meta">Israel Bookshop Publications · Both titles translated into Hebrew and Russian, and used in the Israel Ministry of Education curriculum.</p>
           </div>
         </article>
       </div>
@@ -271,10 +261,11 @@
       <div class="two-up">
         <ol class="life">
           <li><span class="when">1974</span><div><strong>Black belt</strong><span>International Tang Soo Do Association, at eighteen.</span></div></li>
+          <li><span class="when">1976</span><div><strong>East Coast YMCA Black Belt Heavyweight Title</strong><span></span></div></li>
           <li><span class="when">1970s</span><div><strong>University of Vermont</strong><span>Found Judaism as a student, and left for yeshiva in Israel.</span></div></li>
-          <li><span class="when">1979</span><div><strong>Left for Israel</strong><span>To learn, and to stay.</span></div></li>
+          <li><span class="when">1979</span><div><strong>Left for Israel</strong><span>To learn, and stayed on to teach.</span></div></li>
           <li><span class="when">1979–1992</span><div><strong>Yeshiva and kollel</strong><span>Thirteen years at Tomchei Temimim, then ordination from the Chief Rabbinate and training as a rabbinic advocate at the Harry Fischel Institute.</span></div></li>
-          <li><span class="when">1992–2005</span><div><strong>Israel Prison Service</strong><span>Full-time chaplain and staff officer with the rank of Major, serving the men in maximum-security facilities.</span></div></li>
+          <li><span class="when">1992–2005</span><div><strong>Israel Prison Service</strong><span>Full-time chaplain and staff officer with the rank of Major, serving the men and women in maximum-security facilities.</span></div></li>
           <li><span class="when">1998–2007</span><div><strong>Tel Aviv University</strong><span>Chabad campus chaplain, as an emissary of the Rebbe.</span></div></li>
           <li><span class="when">2006</span><div><strong>Eighth-degree master instructor</strong><span>Promoted by Grandmaster Dr. Tae Yun Kim.</span></div></li>
         </ol>
@@ -289,8 +280,8 @@
     <div class="wrap speaking">
       <div class="prose">
       <h2>Speaking</h2>
-      <p>I speak at campuses, schools, communities and companies, in Israel and abroad, about the prison years, about the martial arts, and about what holds a family together. Some talks include a karate demonstration; most are simply stories and the lessons inside them.</p>
-      <p>If you'd like to arrange a talk, <a href="#contact">write to me</a> and tell me about your audience.</p>
+      <p>I’ve spoken at campuses, schools, communities and companies worldwide, about the prison years, about the martial arts, and about what holds a family together. Some talks include a karate demonstration; most are simply stories and the lessons inside them.</p>
+      <p>In recent years I’ve spent more time writing and publishing than speaking. If you’d like to arrange a talk, <a href="#contact">write to me</a> and tell me about your audience.</p>
       </div>
       <figure class="shot">
         <img src="demonstration.jpg" alt="Rabbi Fishel Jacobs breaking concrete blocks during a demonstration" loading="lazy">
